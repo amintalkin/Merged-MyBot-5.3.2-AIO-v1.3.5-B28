@@ -540,25 +540,25 @@ Func Train()
 			If Not (IsTrainPage()) Then Return ; exit from train if no train page
 			Switch $barrackTroop[$brrNum - 1]
 				Case 0
-					TrainClick(220, 320 + $midOffsetY, 75, 10, $FullBarb, $GemBarb, "#0274") ; Barbarian
+					TrainClick(166, 320 + $midOffsetY, 75, 10, $FullBarb, $GemBarb, "#0274") ; Barbarian
 				Case 1
-					TrainClick(331, 320 + $midOffsetY, 75, 10, $FullArch, $GemArch, "#0275") ; Archer
+					TrainClick(245, 320 + $midOffsetY, 75, 10, $FullArch, $GemArch, "#0275") ; Archer
 				Case 2
-					TrainClick(432, 320 + $midOffsetY, 15, 10, $FullGiant, $GemGiant, "#0276") ; Giant
+					TrainClick(370, 320 + $midOffsetY, 15, 10, $FullGiant, $GemGiant, "#0276") ; Giant
 				Case 3
-					TrainClick(546, 320 + $midOffsetY, 75, 10, $FullGobl, $GemGobl, "#0277") ; Goblin
+					TrainClick(482, 320 + $midOffsetY, 75, 10, $FullGobl, $GemGobl, "#0277") ; Goblin
 				Case 4
-					TrainClick(647, 320 + $midOffsetY, 37, 10, $FullWall, $GemWall, "#0278") ; Wall Breaker
+					TrainClick(557, 320 + $midOffsetY, 37, 10, $FullWall, $GemWall, "#0278") ; Wall Breaker
 				Case 5
-					TrainClick(220, 425 + $midOffsetY, 15, 10, $FullBall, $GemBall, "#0279") ; Balloon
+					TrainClick(682, 320 + $midOffsetY, 15, 10, $FullBall, $GemBall, "#0279") ; Balloon
 				Case 6
-					TrainClick(331, 425 + $midOffsetY, 18, 10, $FullWiza, $GemWiza, "#0280") ; Wizard
+					TrainClick(173, 425 + $midOffsetY, 18, 10, $FullWiza, $GemWiza, "#0280") ; Wizard
 				Case 7
-					TrainClick(432, 425 + $midOffsetY, 5, 10, $FullHeal, $GemHeal, "#0281") ; Healer
+					TrainClick(263, 425 + $midOffsetY, 5, 10, $FullHeal, $GemHeal, "#0281") ; Healer
 				Case 8
-					TrainClick(546, 425 + $midOffsetY, 3, 10, $FullDrag, $GemDrag, "#0282") ; Dragon
+					TrainClick(383, 425 + $midOffsetY, 3, 10, $FullDrag, $GemDrag, "#0282") ; Dragon
 				Case 9
-					TrainClick(647, 425 + $midOffsetY, 3, 10, $FullPekk, $GemPekk, "#0283") ; Pekka
+					TrainClick(474, 425 + $midOffsetY, 3, 10, $FullPekk, $GemPekk, "#0283") ; Pekka
 			EndSwitch
 			If $OutOfElixir = 1 Then
 				Setlog("Not enough Elixir to train troops!", $COLOR_RED)

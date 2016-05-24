@@ -49,7 +49,7 @@
 #include <Process.au3>
 
 
-Global Const $LatestVersionExpected = "Merged-MyBot-5.3.2-AIO-v1.3.5-B18"
+Global Const $LatestVersionExpected = "Merged-MyBot-5.3.2-AIO-v1.3.5-B19"
 
 Global Const $DEFAULT_HEIGHT = 780
 Global Const $DEFAULT_WIDTH = 860
@@ -1112,7 +1112,9 @@ Global $attackcsv_locate_gold_storage = 0
 Global $attackcsv_locate_elixir_storage = 0
 Global $attackcsv_locate_dark_storage = 0
 Global $attackcsv_locate_townhall = 0
+
 Global $attackcsv_use_red_line = 1
+Global $attackcsv_csv_speed = 1
 
 ;Milking Attack
 Global $debugresourcesoffset = 0 ;make images with offset to check correct adjust values

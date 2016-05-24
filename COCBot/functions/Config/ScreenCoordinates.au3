@@ -113,18 +113,17 @@ Global $CampFull[4]  	            = [328, 535 + $midOffsetY, 0xD03840,     20]
 ;Global $DropTrophiesStartPoint = [34, 310]
 #ce
 
-Global $TrainBarb[4]        = [ 220, 310 + $midOffsetY, 0xFFC721,     40] ;  Done
-Global $TrainArch[4]        = [ 301, 315 + $midOffsetY, 0x882852,     40] ;  Done 882858
-Global $TrainGiant[4]       = [ 442, 310 + $midOffsetY, 0xFFCB8A,     40] ;  Done
-Global $TrainGobl[4]        = [ 546, 310 + $midOffsetY, 0xA8F468,     40] ;  Done A0F263
-Global $TrainWall[4]        = [ 646, 310 + $midOffsetY, 0x78D4F0,     40] ;  Done 72D4EA
+Global $TrainBarb[4] = [220 - 54, 310 + $midOffsetY, 0xFFB620, 40]
+Global $TrainArch[4] = [301 - 56, 315 + $midOffsetY, 0x882852, 40]
+Global $TrainGiant[4]= [442 - 72, 310 + $midOffsetY, 0xFFCE94, 40]
+Global $TrainGobl[4] = [546 - 64, 310 + $midOffsetY, 0xA9F36B, 40]
+Global $TrainWall[4] = [646 - 89, 310 + $midOffsetY, 0x786C8A, 40]
+Global $TrainBall[4] = [682     , 310 + $midOffsetY, 0x7C1C10, 40]
 
-;Global $TrainBall[4]        = [ 220, 459 + $midOffsetY, 0x1C150C,     40] ;  Done
-Global $TrainBall[4]        = [ 218, 465 + $midOffsetY, 0x66452D,     40] ;  Done
-Global $TrainWiza[4]        = [ 319, 447 + $midOffsetY, 0x000000,     40] ;  Done
-Global $TrainHeal[4]        = [ 442, 459 + $midOffsetY, 0xD77E57,     40] ;  Done D0724B
-Global $TrainDrag[4]        = [ 546, 459 + $midOffsetY, 0xD04428,     40] ;  Done
-Global $TrainPekk[4]        = [ 646, 459 + $midOffsetY, 0x406281,     40] ;  Done 436486
+Global $TrainWiza[4] = [183, 446 + $midOffsetY, 0xE3937C, 40]
+Global $TrainHeal[4] = [263, 459 + $midOffsetY, 0xD67244, 40]
+Global $TrainDrag[4] = [383, 459 + $midOffsetY, 0x493153, 40]
+Global $TrainPekk[4] = [474, 459 + $midOffsetY, 0x395671, 40]
 
 Global $TrainMini[4]        = [ 220, 310 + $midOffsetY, 0x182340,     40] ;  Done
 Global $TrainHogs[4]        = [ 301, 310 + $midOffsetY, 0x72D0E8,     40] ;  Done 71D0E8
@@ -139,17 +138,17 @@ Global $NextBtn[4]          = [ 780, 546 + $bottomOffsetY, 0xD34300,  20] ;  Nex
 
 Global $aRequestTroopsAO[6]	= [707, 290 + $midOffsetY, 0xD8EC80, 0x12130B, 0xDADADA, 20] ; Button Request Troops in Army Overview  (x,y,can request, request allready made, army full/no clan, toll)
 
-Global Const $FullBarb[4]   = [ 253, 375 + $midOffsetY, 0x8F8F8F, 45]  ; Location of Elixir check pixel with normal color and Barrack Full color
-Global Const $FullArch[4]   = [ 360, 375 + $midOffsetY, 0x8D8D8D, 45]
-Global Const $FullGiant[4]  = [ 468, 375 + $midOffsetY, 0x8D8D8D, 45]
-Global Const $FullGobl[4]   = [ 574, 375 + $midOffsetY, 0x8F8F8F, 45]
-Global Const $FullWall[4]   = [ 680, 375 + $midOffsetY, 0x8F8F8F, 45]
+Global Const $FullBarb[4] = [198, 375 + $midOffsetY, 0x6D6D6D, 45] ; Location of Elixir check pixel with normal color and Barrack Full color
+Global Const $FullArch[4] = [308, 375 + $midOffsetY, 0x7F7F7F, 45]
+Global Const $FullGiant[4] = [405, 375 + $midOffsetY, 0x7F7F7F, 45]
+Global Const $FullGobl[4] = [507, 375 + $midOffsetY, 0x7D7D7D, 45]
+Global Const $FullWall[4] = [609, 375 + $midOffsetY, 0x797979, 45]
+Global Const $FullBall[4] = [712, 375 + $midOffsetY, 0x7D7D7D, 45]
 
-Global Const $FullBall[4]   = [ 253, 482 + $midOffsetY, 0xB5B5B5, 45]
-Global Const $FullWiza[4]   = [ 360, 482 + $midOffsetY, 0xB5B5B5, 45]
-Global Const $FullHeal[4]   = [ 468, 482 + $midOffsetY, 0xB5B5B5, 45]
-Global Const $FullDrag[4]   = [ 574, 482 + $midOffsetY, 0xB5B5B5, 45]
-Global Const $FullPekk[4]   = [ 680, 482 + $midOffsetY, 0xB5B5B5, 45]
+Global Const $FullWiza[4] = [200, 482 + $midOffsetY, 0x9C9C9C, 45]
+Global Const $FullHeal[4] = [302, 482 + $midOffsetY, 0x9F9F9F, 45]
+Global Const $FullDrag[4] = [404, 482 + $midOffsetY, 0x9C9C9C, 45]
+Global Const $FullPekk[4] = [507, 482 + $midOffsetY, 0x949494, 45]
 
 Global Const $FullMini[4]   = [ 255, 348 + $midOffsetY, 0xFFFFFF, 15] ; 0xC7F8F8 Most locations are only 30 decimal change in blue to gray (Dk blue chest)
 Global Const $FullHogs[4]   = [ 364, 355 + $midOffsetY, 0xB2B2B2, 30] ; 0xD07C58 normal (lt brown shoulder)

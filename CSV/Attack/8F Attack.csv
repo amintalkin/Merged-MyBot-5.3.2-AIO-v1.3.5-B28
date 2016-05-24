@@ -3,8 +3,7 @@ NOTE  |Warning! This attack is bot-like.
 NOTE  |
 NOTE  |By AwesomeGamer
 NOTE  |Version 2.0 (Feb. 5th 2016)
-NOTE  |
-NOTE  |Select Deploy Speed To Fast Or Normal
+
       |Update: Drops archers and barbs evenly on each edge
       |drops all other troops near the middle of each edge
 
@@ -14,8 +13,8 @@ NOTE  |Select Deploy Speed To Fast Or Normal
 
       |Note: AwesomeGamer base code mods are required for this csv attack to work.
 
-      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE |USE RED LINE
-SIDE  |           |           |           |           |           |           |           |BOTTOM-RIGHT|NO
+      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE |USE RED LINE|DEPL.TYPE
+SIDE  |           |           |           |           |           |           |           |BOTTOM-RIGHT|NO          |BOTSPEED
 
       |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|____________|MAKE VECTORS Barb and Arch
 MAKE  |A          |FRONT-RIGHT|ALL        |0          |EXT-INT    |0          |0          |            |
