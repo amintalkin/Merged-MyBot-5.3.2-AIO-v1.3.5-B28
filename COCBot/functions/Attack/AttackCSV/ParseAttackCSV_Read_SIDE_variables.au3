@@ -30,7 +30,7 @@ Func ParseAttackCSV_Read_SIDE_variables()
 	EndIf
 
 	Local $f, $line, $acommand, $command
-	Local $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9, $value10
+	Local $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9
 
 	If FileExists($dirAttacksCSV & "\" & $filename & ".csv") Then
 		$f = FileOpen($dirAttacksCSV & "\" & $filename & ".csv", 0)
@@ -103,13 +103,7 @@ Func ParseAttackCSV_Read_SIDE_variables()
 						$attackcsv_use_red_line = 0
 					Else
 						$attackcsv_use_red_line = 1
-					 EndIf
-
-					 If StringUpper($value10) = "BOTSPEED" Then
-						$attackcsv_csv_speed = 0
-					 Else
-						$attackcsv_csv_speed = 1
-					 EndIf
+					EndIf
 					ExitLoop
 				EndIf
 			EndIf
