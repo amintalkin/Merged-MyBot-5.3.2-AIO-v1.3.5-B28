@@ -14,8 +14,8 @@ NOTE  |Select Deploy Speed To Fast Or Normal
 
       |Note: AwesomeGamer base code mods are required for this csv attack to work.
 
-      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE |USE RED LINE
-SIDE  |           |           |           |           |           |           |           |BOTTOM-RIGHT|NO
+      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE |USE RED LINE|DEPL.TYPE
+SIDE  |           |           |           |           |           |           |           |BOTTOM-RIGHT|NO          |BOTSPEED
 
       |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|____________|MAKE VECTORS Barb and Arch
 MAKE  |A          |RIGHT-BACK |ALL        |0          |EXT-INT    |0          |0          |            |

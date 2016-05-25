@@ -37,13 +37,15 @@ Func ParseAttackCSV($debug = False)
 	EndIf
 	Setlog("execute " & $filename)
 	
-	If $iRadClickSpeedFast = 1 Then
-		Setlog("Deploy Speed: Fast", $COLOR_BLUE)
-	ElseIf $iRadClickSpeedFast = 0 Then
-		Setlog("Deploy Speed: Normal", $COLOR_BLUE)
+	If $attackcsv_csv_speed = 0 Then
+	   If $iRadClickSpeedFast = 1 Then
+		   Setlog("Deploy Speed: Fast", $COLOR_BLUE)
+	   Else
+		   Setlog("Deploy Speed: Normal", $COLOR_BLUE)
+		EndIf
 	 Else
-	    Setlog("Deploy Speed: CSV", $COLOR_BLUE)
-	EndIf
+		Setlog("Deploy Speed: CSV", $COLOR_BLUE)
+	 EndIf
 
 	Local $f, $line, $acommand, $command
 	Local $value1, $value2, $value3, $value4, $value5, $value6, $value7, $value8, $value9
@@ -288,7 +290,7 @@ Func ParseAttackCSV($debug = False)
 								$sleepdrop2 = 1
 							EndIf
 						EndIf
-						If $iRadClickSpeedFast <> 2 Then
+						 If $attackcsv_csv_speed = 0 Then
 						   DropTroopFromINI2($value1, $index1, $index2, $qty1, $qty2, $value4, $delaypoints1, $delaypoints2, $delaydrop1, $delaydrop2, $sleepdrop1, $sleepdrop2, $isQtyPercent, $isIndexPercent, $debug)
 						Else
 						   DropTroopFromINI($value1, $index1, $index2, $qty1, $qty2, $value4, $delaypoints1, $delaypoints2, $delaydrop1, $delaydrop2, $sleepdrop1, $sleepdrop2, $debug)
