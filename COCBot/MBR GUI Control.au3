@@ -121,7 +121,7 @@ Func GUIControl($hWind, $iMsg, $wParam, $lParam)
 				Case $CheckVersionConfig
 					If CheckMODVersion() Then MsgBox(0, "", "You Are Using The Latest Version Of Mod All In One")
 				Case $DownloadLatestConfig
-					ShellExecute("https://github.com/amintalkin/Merged-MyBot-5.3.2-AIO-v1.3.5-B21/archive/master.zip")
+					ShellExecute("https://github.com/amintalkin/Merged-MyBot-5.3.2-AIO-v1.3.5-B22/archive/master.zip")
 				Case $ModSupportConfig
 					ShellExecute("https://mybot.run/forums/index.php?/topic/17570-new-updates-merged-mybot-532-all-mods-in-one-v133-28-04-16/")
 				Case $AboutConfig

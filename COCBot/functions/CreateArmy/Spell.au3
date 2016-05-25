@@ -42,7 +42,7 @@ Func BrewSpells()
 					If $debugSetlog = 1 Then SetLog("Making Lightning Spell: " & $iLightningSpell)
 					If _sleep($iDelayTrain2) Then Return
 					If $iTempLightningSpell = 0 Or $iChkBarrackSpell = 1 Then
-						If _ColorCheck(_GetPixelColor(239 + 107 * 0, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
+						If _ColorCheck(_GetPixelColor(235 + 107 * 0, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
 							setlog("Not enough Elixir to create Spell", $COLOR_RED)
 							Return
 						ElseIf _ColorCheck(_GetPixelColor(200, 346 + $midOffsetY, True), Hex(0x414141, 6), 20) Then
@@ -67,7 +67,7 @@ Func BrewSpells()
 					If $debugSetlog = 1 Then SetLog("Making Heal Spell: " & $iHealSpell)
 					If _sleep($iDelayTrain2) Then Return
 					If $iTempHealSpell = 0 Or $iChkBarrackSpell = 1 Then
-						If _ColorCheck(_GetPixelColor(239 + 107 * 1, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
+						If _ColorCheck(_GetPixelColor(235 + 107 * 1, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
 							setlog("Not enough Elixir to create Spell", $COLOR_RED)
 							Return
 						ElseIf _ColorCheck(_GetPixelColor(200, 346 + $midOffsetY, True), Hex(0x414141, 6), 20) Then
@@ -92,7 +92,7 @@ Func BrewSpells()
 					If $debugSetlog = 1 Then SetLog("Making Rage Spell: " & $iRageSpell)
 					If _sleep($iDelayTrain2) Then Return
 					If $iTempRageSpell = 0 Or $iChkBarrackSpell = 1 Then
-						If _ColorCheck(_GetPixelColor(239 + 107 * 2, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
+						If _ColorCheck(_GetPixelColor(235 + 107 * 2, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
 							setlog("Not enough Elixir to create Spell", $COLOR_RED)
 							Return
 						ElseIf _ColorCheck(_GetPixelColor(200, 346 + $midOffsetY, True), Hex(0x414141, 6), 20) Then
@@ -117,7 +117,7 @@ Func BrewSpells()
 					If $debugSetlog = 1 Then SetLog("Making Jump Spell: " & $iJumpSpell)
 					If _sleep($iDelayTrain2) Then Return
 					If $iTempJumpSpell = 0 Then
-						If _ColorCheck(_GetPixelColor(239 + 107 * 3, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
+						If _ColorCheck(_GetPixelColor(235 + 107 * 3, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
 							setlog("Not enough Elixir to create Spell", $COLOR_RED)
 							Return
 						ElseIf _ColorCheck(_GetPixelColor(200, 346 + $midOffsetY, True), Hex(0x414141, 6), 20) Then
@@ -139,7 +139,7 @@ Func BrewSpells()
 					If $debugSetlog = 1 Then SetLog("Making Freeze Spell: " & $iFreezeSpell)
 					If _sleep($iDelayTrain2) Then Return
 					If $iTempFreezeSpell = 0 Then
-						If _ColorCheck(_GetPixelColor(239 + 107 * 4, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
+						If _ColorCheck(_GetPixelColor(235 + 107 * 4, 375 + $midOffsetY, True), Hex(0xFFFFFF, 6), 20) = False Then ; White into number 0
 							setlog("Not enough Elixir to create Spell", $COLOR_RED)
 							Return
 						ElseIf _ColorCheck(_GetPixelColor(200, 346 + $midOffsetY, True), Hex(0x414141, 6), 20) Then
