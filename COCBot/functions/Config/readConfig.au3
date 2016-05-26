@@ -743,6 +743,9 @@ $itxtTreasuryGold = iniRead($config,"other","treasuryGold","0000")
 		$percentCollectors = Number(IniRead($config, "SaveTroops", "PercentCollectors", "80"))
 		$redlineDistance = Number(IniRead($config, "SaveTroops", "MaxDistance", "50"))
 
+		; Misc Battle Settings - Added by LunaEclipse
+		$AndroidAdbClicksEnabled = IniRead($config, "Fast Clicks", "UseADBFastClicks", "0")
+
 		; Custom Deployment Settings - Added by LunaEclipse
 		$deployValues = deployStringToArray(IniRead($config, "Custom Deployment", "Deployment", ""))
 		$valueTownHall = Number(IniRead($config, "Custom Deployment", "TownHallPoints", "5"))

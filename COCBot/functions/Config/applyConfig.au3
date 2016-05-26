@@ -1919,6 +1919,15 @@ EndIf
 	GUICtrlSetData($txtPercentCollectors, $percentCollectors)
 	GUICtrlSetData($txtDistance, $redlineDistance)
 
+	; Misc Battle Settings - Added by LunaEclipse
+	If $AndroidAdbClicksEnabled = 1 Then
+		GUICtrlSetState($chkFastADBClicks, $GUI_CHECKED)
+		$AndroidAdbClicksEnabled = True
+	Else
+		GUICtrlSetState($chkFastADBClicks, $GUI_UNCHECKED)
+		$AndroidAdbClicksEnabled = False
+	EndIf
+
 	; Custom Deployment Settings - Added by LunaEclipse
 	GUICtrlSetData($txtTownHall, $valueTownHall)
 	GUICtrlSetData($txtDEStorage, $valueDEStorage)

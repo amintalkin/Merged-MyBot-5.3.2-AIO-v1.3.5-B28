@@ -1808,6 +1808,13 @@ EndIf
 	IniWrite($config, "SaveTroops", "PercentCollectors", GUICtrlRead($txtPercentCollectors))
 	IniWrite($config, "SaveTroops", "MaxDistance", GUICtrlRead($txtDistance))
 
+	; Misc Battle Settings - Added by LunaEclipse
+	If GUICtrlRead($chkFastADBClicks) = $GUI_CHECKED Then
+		IniWrite($config, "Fast Clicks", "UseADBFastClicks", 1)
+	Else
+		IniWrite($config, "Fast Clicks", "UseADBFastClicks", 0)
+	EndIf
+
 	; Custom Deployment Settings - Added by LunaEclipse
 	IniWrite($config, "Custom Deployment", "Deployment", deployArrayToString($deployValues))
 	IniWrite($config, "Custom Deployment", "TownHallPoints", GUICtrlRead($txtTownHall))

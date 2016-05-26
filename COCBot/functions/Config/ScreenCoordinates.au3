@@ -178,7 +178,9 @@ Global Const $GemWitc[4] = [666, 372 + $midOffsetY, 0xE70A12, 30]
 
 Global Const $GemLava[4] = [239, 482 + $midOffsetY, 0xE70A12, 30]
 
-Global Const $aCloseChat[4] = [ 331, 330 + $midOffsetY, 0xF0A03B, 20]
+;edited Bt AminTalkin
+;Global Const $aCloseChat[4] = [ 331, 330 + $midOffsetY, 0xF0A03B, 20]
+Global Const $aCloseChat[4] = [ 331, 330 + $midOffsetY, 0xF0941B, 20]
 
 ;attackreport
 Global Const $aAtkRprtDECheck[4]     = [ 459, 372 + $midOffsetY, 0x433350, 20]
