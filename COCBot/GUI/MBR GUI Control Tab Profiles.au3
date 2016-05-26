@@ -31,7 +31,7 @@ Func cmbProfile()
 
 	SetLog(_PadStringCenter("Profile " & $sCurrProfile & " loaded from " & $config, 50, "="), $COLOR_GREEN)
 	; IceCube (PushBullet Revamp v1.1)
-	If $RunState AND $pAlertMFSwitch Then
+	If $RunState AND $pAlertMFSwitch = 1 Then
 		_Push("Multy-Farming account switched to " & $sCurrProfile)
 	EndIf
 	; IceCube (PushBullet Revamp v1.1)

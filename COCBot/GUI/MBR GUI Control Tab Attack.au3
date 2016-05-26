@@ -217,11 +217,3 @@ Func chkABHeroWait()
 		EndIf
 	EndIf
 EndFunc   ;==>chkABHeroWait
-
-Func chkFastADBClicks()
-	If GUICtrlRead($chkFastADBClicks) = $GUI_CHECKED Then
-		$AndroidAdbClicksEnabled = True
-	Else
-		$AndroidAdbClicksEnabled = False
-	EndIf
-EndFunc   ;==>chkFastADBClicks

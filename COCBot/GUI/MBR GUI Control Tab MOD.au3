@@ -357,3 +357,11 @@ Func chkCoCStats()
 	  GUICtrlSetState($txtAPIKey, $GUI_DISABLE)
 	EndIf
 EndFunc ;==> chkCoCStats
+
+Func chkFastADBClicks()
+	If GUICtrlRead($chkFastADBClicks) = $GUI_CHECKED Then
+		$AndroidAdbClicksEnabled = True
+	Else
+		$AndroidAdbClicksEnabled = False
+	EndIf
+EndFunc   ;==>chkFastADBClicks
