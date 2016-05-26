@@ -136,7 +136,7 @@ Global $TrainLava[4]        = [ 220, 459 + $midOffsetY, 0x4F4F40,     40] ;  Don
 Global $NextBtn[4]          = [ 780, 546 + $bottomOffsetY, 0xD34300,  20] ;  Next Button
 ; Someone asking troops : Color 0xD0E978 in x = 121
 
-Global $aRequestTroopsAO[6]	= [707, 290 + $midOffsetY, 0xD8EC80, 0x12130B, 0xDADADA, 20] ; Button Request Troops in Army Overview  (x,y,can request, request allready made, army full/no clan, toll)
+Global $aRequestTroopsAO[6]	= [702, 299 + $midOffsetY, 0xd0eb78, 0x000100, 0xd6d6d6, 15] ; Button Request Troops in Army Overview  (x,y,can request, request allready made, army full/no clan, toll)
 
 Global Const $FullBarb[4] = [198, 375 + $midOffsetY, 0x6D6D6D, 45] ; Location of Elixir check pixel with normal color and Barrack Full color
 Global Const $FullArch[4] = [308, 375 + $midOffsetY, 0x7F7F7F, 45]
@@ -176,11 +176,11 @@ Global Const $GemValk[4] = [453, 372 + $midOffsetY, 0xE70A12, 30]
 Global Const $GemGole[4] = [559, 378 + $midOffsetY, 0xE70A12, 30]
 Global Const $GemWitc[4] = [666, 372 + $midOffsetY, 0xE70A12, 30]
 
-Global Const $GemLava[4] = [239, 482 + $midOffsetY, 0xE70A12, 30]
+Global Const $GemLava[4]    = [ 239, 372 + $midOffsetY, 0xE70A12, 30]
 
 ;edited Bt AminTalkin
 ;Global Const $aCloseChat[4] = [ 331, 330 + $midOffsetY, 0xF0A03B, 20]
-Global Const $aCloseChat[4] = [ 331, 330 + $midOffsetY, 0xF0941B, 20]
+Global Const $aCloseChat[4] = [ 332, 370 + $midOffsetY, 0xc84c08, 10]
 
 ;attackreport
 Global Const $aAtkRprtDECheck[4]     = [ 459, 372 + $midOffsetY, 0x433350, 20]

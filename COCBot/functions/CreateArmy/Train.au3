@@ -950,18 +950,18 @@ Func Train()
 						If Eval($TroopDarkName[$i] & "Comp") <> "0" Then
 						$heightTroop = 294 + $midOffsetY
 							$positionTroop = $TroopDarkNamePosition[$i]
-						If $TroopDarkNamePosition[$i] > 5 Then
+						If $TroopDarkNamePosition[$i] > 4 Then
 							$heightTroop = 396 + $midOffsetY
-							$positionTroop = $TroopDarkNamePosition[$i] - 6
+							$positionTroop = $TroopDarkNamePosition[$i] - 5
 							EndIf
 
 							;read troops in windows troopsfirst
-						If $debugSetlog = 1 And Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)) <> 0 Then SetLog("ASSIGN TroopFirst.." & $TroopDarkName[$i] & ": " & Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)), $COLOR_PURPLE)
-						Assign(("troopFirst" & $TroopDarkName[$i]), Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)))
+						If $debugSetlog = 1 And Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)) <> 0 Then SetLog("ASSIGN TroopFirst.." & $TroopDarkName[$i] & ": " & Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)), $COLOR_PURPLE)
+						Assign(("troopFirst" & $TroopDarkName[$i]), Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)))
 							If Eval("troopFirst" & $TroopDarkName[$i]) = 0 Then
 								If _Sleep($iDelayTrain1) Then ExitLoop
-							If $debugSetlog = 1 And Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)) <> 0 Then SetLog("ASSIGN TroopFirst..." & $TroopDarkName[$i] & ": " & Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)), $COLOR_PURPLE)
-							Assign(("troopFirst" & $TroopDarkName[$i]), Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)))
+							If $debugSetlog = 1 And Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)) <> 0 Then SetLog("ASSIGN TroopFirst..." & $TroopDarkName[$i] & ": " & Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)), $COLOR_PURPLE)
+							Assign(("troopFirst" & $TroopDarkName[$i]), Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)))
 							EndIf
 						EndIf
 					Next
@@ -1021,16 +1021,16 @@ Func Train()
 						If Eval($TroopDarkName[$i] & "Comp") <> "0" Then
 						$heightTroop = 294 + $midOffsetY
 							$positionTroop = $TroopDarkNamePosition[$i]
-						If $TroopDarkNamePosition[$i] > 5 Then
+						If $TroopDarkNamePosition[$i] > 4 Then
 							$heightTroop = 396 + $midOffsetY
-							$positionTroop = $TroopDarkNamePosition[$i] - 6
+							$positionTroop = $TroopDarkNamePosition[$i] - 5
 							EndIf
-						If $debugSetlog = 1 Then SetLog(">>>troopSecond" & $TroopDarkName[$i] & " = " & Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)), $COLOR_PURPLE)
-						Assign(("troopSecond" & $TroopDarkName[$i]), Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)))
+						If $debugSetlog = 1 Then SetLog(">>>troopSecond" & $TroopDarkName[$i] & " = " & Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)), $COLOR_PURPLE)
+						Assign(("troopSecond" & $TroopDarkName[$i]), Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)))
 							If Eval("troopSecond" & $TroopDarkName[$i]) = 0 Then
 								If _Sleep($iDelayTrain1) Then ExitLoop
-							If $debugSetlog = 1 Then SetLog(">>>troopSecond" & $TroopDarkName[$i] & " = " & Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)), $COLOR_PURPLE)
-							Assign(("troopSecond" & $TroopDarkName[$i]), Number(getBarracksTroopQuantity(126 + 102 * $positionTroop, $heightTroop)))
+							If $debugSetlog = 1 Then SetLog(">>>troopSecond" & $TroopDarkName[$i] & " = " & Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)), $COLOR_PURPLE)
+							Assign(("troopSecond" & $TroopDarkName[$i]), Number(getBarracksTroopQuantity(175 + 107 * $positionTroop, $heightTroop)))
 							EndIf
 						EndIf
 					Next

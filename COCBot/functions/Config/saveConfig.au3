@@ -1949,6 +1949,30 @@ EndIf
 	IniWrite($config, "Close When Training", "AdditionMin", GUICtrlRead($sldExtraTimeMin))
 	IniWrite($config, "Close When Training", "AdditionMax", GUICtrlRead($sldExtraTimeMax))
 
+	If GUICtrlRead($radLeaveCoCOpen) = $GUI_CHECKED Then
+		IniWrite($config, "Leave CoC Open", "Enabled", 1)
+	Else
+		IniWrite($config, "Leave CoC Open", "Enabled", 0)
+	EndIf
+
+	If GUICtrlRead($radCloseCoCGame) = $GUI_CHECKED Then
+		IniWrite($config, "Close CoC Game", "Enabled", 1)
+	Else
+		IniWrite($config, "Close CoC Game", "Enabled", 0)
+	EndIf
+
+	If GUICtrlRead($radRandomCoCOpen) = $GUI_CHECKED Then
+		IniWrite($config, "Random Leave-Close", "Enabled", 1)
+	Else
+		IniWrite($config, "Random Leave-Close", "Enabled", 0)
+	EndIf
+
+	If GUICtrlRead($chkRandomStayORClose) = $GUI_CHECKED Then
+		IniWrite($config, "Random Stay-Close Game", "Enabled", 1)
+	Else
+		IniWrite($config, "Random Stay-Close Game", "Enabled", 0)
+	EndIf
+
 	; Daily Attack Settings
 	If GUICtrlRead($chkUseAttackLimit) = $GUI_CHECKED Then
 		IniWrite($config, "Daily Attacks", "Enabled", 1)

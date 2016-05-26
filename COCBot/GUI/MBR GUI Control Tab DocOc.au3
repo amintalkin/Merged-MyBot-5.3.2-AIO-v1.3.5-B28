@@ -15,7 +15,7 @@
 
 Func calculateSleepTime($startHour, $endHour)
 	Local $hours = $endHour - $startHour
-	
+
 	If $hours < 0 Then $hours += 24
 
 	GUICtrlSetData($lblTotalSleep, "Estimated Sleep Time: " & String($hours - 1) & " - " & String($hours + 1) & " Hours")
@@ -38,25 +38,25 @@ EndFunc   ;==>chkUseSleep
 Func cmbStartSleep()
 	$sleepStart = _GUICtrlComboBox_GetCurSel($cmbStartSleep)
 	$nextSleepStart = calculateSleepStart()
-	
+
 	calculateSleepTime($sleepStart, $sleepEnd)
 EndFunc   ;==>cmbStartSleep
 
 Func cmbEndSleep()
 	$sleepEnd = _GUICtrlComboBox_GetCurSel($cmbEndSleep)
 	$nextSleepEnd = calculateSleepEnd()
-	
+
 	calculateSleepTime($sleepStart, $sleepEnd)
 EndFunc   ;==>cmbEndSleep
 
 Func chkUseTrainingClose()
 	If GUICtrlRead($chkUseTrainingClose) = $GUI_CHECKED Then
-		For $i = $lblExtraTimeMin To $sldExtraTimeMax
+		For $i = $lblExtraTimeMin To $chkRandomStayORClose
 			GUICtrlSetState($i, $GUI_SHOW)
 		Next
 		$ichkCloseTraining = 1
 	Else
-		For $i = $lblExtraTimeMin To $sldExtraTimeMax
+		For $i = $lblExtraTimeMin To $chkRandomStayORClose
 			GUICtrlSetState($i, $GUI_HIDE)
 		Next
 		$ichkCloseTraining = 0
@@ -66,7 +66,7 @@ EndFunc   ;==>chkUseTrainingClose
 Func sldExtraTimeMin()
 	$minTrainAddition = GUICtrlRead($sldExtraTimeMin)
 	GUICtrlSetData($lblExtraTimeMinNumber, $minTrainAddition)
-	
+
 	; Move the maximum slider if needed
 	If $minTrainAddition > $maxTrainAddition Then
 		$maxTrainAddition = $minTrainAddition
@@ -74,7 +74,7 @@ Func sldExtraTimeMin()
 		GUICtrlSetData($lblExtraTimeMaxNumber, $minTrainAddition)
 		GUICtrlSetData($sldExtraTimeMax, $minTrainAddition)
 	EndIf
-	
+
 	GUICtrlSetData($lblExtraTimeMinUnit, ($minTrainAddition = 1) ? "minute" : "minutes")
 	GUICtrlSetData($lblExtraTimeMaxUnit, ($maxTrainAddition = 1) ? "minute" : "minutes")
 EndFunc   ;==>sldExtraTimeMin
@@ -82,7 +82,7 @@ EndFunc   ;==>sldExtraTimeMin
 Func sldExtraTimeMax()
 	$maxTrainAddition = GUICtrlRead($sldExtraTimeMax)
 	GUICtrlSetData($lblExtraTimeMaxNumber, $maxTrainAddition)
-	
+
 	; Move the minimum slider if needed
 	If $maxTrainAddition < $minTrainAddition Then
 		$minTrainAddition = $maxTrainAddition
@@ -90,7 +90,7 @@ Func sldExtraTimeMax()
 		GUICtrlSetData($lblExtraTimeMinNumber, $maxTrainAddition)
 		GUICtrlSetData($sldExtraTimeMin, $maxTrainAddition)
 	EndIf
-	
+
 	GUICtrlSetData($lblExtraTimeMinUnit, ($minTrainAddition = 1) ? "minute" : "minutes")
 	GUICtrlSetData($lblExtraTimeMaxUnit, ($maxTrainAddition = 1) ? "minute" : "minutes")
 EndFunc   ;==>sldExtraTimeMax
@@ -112,7 +112,7 @@ EndFunc   ;==>chkUseAttackLimit
 Func sldAttacksMin()
 	$rangeAttacksStart = GUICtrlRead($sldAttacksMin)
 	GUICtrlSetData($lblAttacksMinNumber, $rangeAttacksStart)
-	
+
 	; Move the maximum slider if needed
 	If $rangeAttacksStart > $rangeAttacksEnd Then
 		$rangeAttacksEnd = $rangeAttacksStart
@@ -120,7 +120,7 @@ Func sldAttacksMin()
 		GUICtrlSetData($lblAttacksMaxNumber, $rangeAttacksStart)
 		GUICtrlSetData($sldAttacksMax, $rangeAttacksStart)
 	EndIf
-	
+
 	GUICtrlSetData($lblAttacksMinUnit, ($rangeAttacksStart = 1) ? "attack" : "attacks")
 	GUICtrlSetData($lblAttacksMaxUnit, ($rangeAttacksEnd = 1) ? "attack" : "attacks")
 EndFunc   ;==>sldAttacksMin
@@ -128,7 +128,7 @@ EndFunc   ;==>sldAttacksMin
 Func sldAttacksMax()
 	$rangeAttacksEnd = GUICtrlRead($sldAttacksMax)
 	GUICtrlSetData($lblAttacksMaxNumber, $rangeAttacksEnd)
-	
+
 	; Move the minimum slider if needed
 	If $rangeAttacksEnd < $rangeAttacksStart Then
 		$rangeAttacksStart = $rangeAttacksEnd
@@ -136,7 +136,7 @@ Func sldAttacksMax()
 		GUICtrlSetData($lblAttacksMinNumber, $rangeAttacksEnd)
 		GUICtrlSetData($sldAttacksMin, $rangeAttacksEnd)
 	EndIf
-	
+
 	GUICtrlSetData($lblAttacksMinUnit, ($rangeAttacksStart = 1) ? "attack" : "attacks")
 	GUICtrlSetData($lblAttacksMaxUnit, ($rangeAttacksEnd = 1) ? "attack" : "attacks")
 EndFunc   ;==>sldAttacksMax

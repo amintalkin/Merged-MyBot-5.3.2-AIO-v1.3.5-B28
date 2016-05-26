@@ -56,7 +56,7 @@ Func DonateCC($Check = False)
 		EndIf
 	EndIf
 
-	Local $y = 119
+	Local $y = 90
 
 	;check for new chats first
 	If $Check = True Then
@@ -74,12 +74,12 @@ Func DonateCC($Check = False)
 	ClickZone($aClanTab[0], $aClanTab[1], 10) ; ClickP($aClanTab, 1, 0, "#0169") ; clicking clan tab
 	If _Sleep($iDelayDonateCC2) Then Return
 
-	Local $Scroll, $offColors[3][3] = [[0x010101, 0, -4], [0xb8e050, 0, 13], [0xb0da49, 0, 16]]; $offColors[3][3] = [[0x000000, 0, -2], [0x262926, 0, 1], [0xF8FCF0, 0, 11]]
+	Local $Scroll, $offColors[3][3] = [[0xc9e871, 0, -4], [0x010101, 0, 10], [0x000000, 0, 25]]; $offColors[3][3] = [[0x000000, 0, -2], [0x262926, 0, 1], [0xF8FCF0, 0, 11]]
 	While $bDonate
 		checkAttackDisable($iTaBChkIdle) ; Early Take-A-Break detection
 
 		If _Sleep($iDelayDonateCC2) Then ExitLoop
-		$DonatePixel = _MultiPixelSearch(202, $y, 203, 660 + $bottomOffsetY, 1, 1, Hex(0xc0e460, 6), $offColors, 15)
+		$DonatePixel = _MultiPixelSearch(222, $y, 223, 649 + $bottomOffsetY, 1, 1, Hex(0xFFFFFF, 6), $offColors, 20)
 		If IsArray($DonatePixel) Then ; if Donate Button found
 			If $debugSetlog = 1 Then Setlog("$DonatePixel: (" & $DonatePixel[0] & "," & $DonatePixel[1] & ")", $COLOR_PURPLE)
 
@@ -99,7 +99,7 @@ Func DonateCC($Check = False)
 				If $ichkExtraAlphabets = 1 Then
 					; Chat Request , Latin + Turkish + Extra latin + Cyrillic Alphabets / three paragraphs.
 					Local $ClanString = ""
-					$ClanString = getChatString(30, $DonatePixel[1] - 78, "coc-latin-cyr")
+					$ClanString = getChatString(30, $DonatePixel[1] - 28, "coc-latin-cyr") ;;;;  New update
 					If $ClanString = "" Then
 						$ClanString = getChatString(30, $DonatePixel[1] - 64, "coc-latin-cyr")
 					Else
@@ -114,7 +114,7 @@ Func DonateCC($Check = False)
 				Else
 					; Chat Request , Latin + Turkish + Extra / three paragraphs.
 					Local $ClanString = ""
-					$ClanString = getChatString(30, $DonatePixel[1] - 78, "coc-latinA")
+					$ClanString = getChatString(30, $DonatePixel[1] - 28, "coc-latinA")  ;;;;  New update
 					If $ClanString = "" Then
 						$ClanString = getChatString(30, $DonatePixel[1] - 64, "coc-latinA")
 					Else
@@ -312,7 +312,7 @@ Func DonateCC($Check = False)
 			ClickP($aAway, 1, 0, "#0171")
 			If _Sleep($iDelayDonateCC2) Then ExitLoop
 		EndIf
-		$DonatePixel = _MultiPixelSearch(202, $y, 203, 620 + $bottomOffsetY, 1, 1, Hex(0xc0e460, 6), $offColors, 15)
+		$DonatePixel = _MultiPixelSearch(222, $y, 223, 649 + $bottomOffsetY, 1, 1, Hex(0xFFFFFF, 6), $offColors, 20)
 		If IsArray($DonatePixel) Then
 			If $debugSetlog = 1 Then Setlog("More Donate buttons found, new $DonatePixel: (" & $DonatePixel[0] & "," & $DonatePixel[1] & ")", $COLOR_PURPLE)
 			ContinueLoop
@@ -635,7 +635,7 @@ Func DonateWindow($Open = True)
 	EndIf
 
 	; Click on Donate Button and wait for the window
-	If _ColorCheck(_GetPixelColor($DonatePixel[0] - 44 , $DonatePixel[1] + 14 , True), Hex(0xFFFFFF, 6), 5) Then
+	If _ColorCheck(_GetPixelColor($DonatePixel[0], $DonatePixel[1], True), Hex(0xFFFFFF, 6), 5) Then
 
 		;DonateStats
 		FileDelete($dirTemp & "*.bmp")
@@ -688,7 +688,7 @@ Func DonateWindow($Open = True)
 
 		;End DonateStats
 
-		ClickZone($DonatePixel[0] - 40, $DonatePixel[1] + 10, 10, 1, 0) ;Click($DonatePixel[0] - 40, $DonatePixel[1] + 10, 1, 0, "#0174")
+		ClickZone($DonatePixel[0], $DonatePixel[1], 5, 1, 0) ;Click($DonatePixel[0] - 40, $DonatePixel[1] + 10, 1, 0, "#0174")
 	Else
 		If $debugSetlog = 1 Then SetLog("Could not find the Donate Button!", $COLOR_PURPLE)
 		Return False
@@ -708,8 +708,8 @@ Func DonateWindow($Open = True)
 	; Will search in $Y column = 410 for the first pure white color and determinate that position the $DonationWindowTemp
 	$DonationWindowY = 0
 
-	Local $aDonWinOffColors[2][3] = [[0xFFFFFF, 0, 2], [0xD7D5CB, 0, 37]]
-	Local $aDonationWindow = _MultiPixelSearch(409, 0, 410, $DEFAULT_HEIGHT, 1, 1, Hex(0xFFFFFF, 6), $aDonWinOffColors, 30)
+	Local $aDonWinOffColors[2][3] = [[0xFFFFFF, 0, 2], [0xc7c5bc, 0, 209]]
+	Local $aDonationWindow = _MultiPixelSearch(409, 0, 410, $DEFAULT_HEIGHT, 1, 1, Hex(0xFFFFFF, 6), $aDonWinOffColors, 10)
 
 	If IsArray($aDonationWindow) Then
 		$DonationWindowY = $aDonationWindow[1]
@@ -728,7 +728,7 @@ Func DonateWindowCap(ByRef $bSkipDonTroops, ByRef $bSkipDonSpells)
 	If $debugSetlog = 1 Then Setlog("DonateCapWindow Start", $COLOR_PURPLE)
 	;read troops capacity
 	If $bSkipDonTroops = False Then
-		Local $sReadCCTroopsCap = getCastleDonateCap(768, $DonationWindowY + 14) ; use OCR to get donated/total capacity
+		Local $sReadCCTroopsCap = getCastleDonateCap(427, $DonationWindowY + 15) ; use OCR to get donated/total capacity
 		If $debugSetlog = 1 Then Setlog("$sReadCCTroopsCap: " & $sReadCCTroopsCap, $COLOR_PURPLE)
 
 		Local $aTempReadCCTroopsCap = StringSplit($sReadCCTroopsCap, "#")
@@ -748,7 +748,7 @@ Func DonateWindowCap(ByRef $bSkipDonTroops, ByRef $bSkipDonSpells)
 	EndIf
 
 	If $bSkipDonSpells = False Then
-		Local $sReadCCSpellsCap = getCastleDonateCap(524, $DonationWindowY + 218) ; use OCR to get donated/total capacity
+		Local $sReadCCSpellsCap = getCastleDonateCap(420, $DonationWindowY + 220) ; use OCR to get donated/total capacity
 		If $debugSetlog = 1 Then Setlog("$sReadCCSpellsCap: " & $sReadCCSpellsCap, $COLOR_PURPLE)
 		Local $aTempReadCCSpellsCap = StringSplit($sReadCCSpellsCap, "#")
 		If $aTempReadCCSpellsCap[0] >= 2 Then
@@ -793,15 +793,15 @@ Func RemainingCCcapacity()
 
 	; Verify with OCR the Donation Clan Castle capacity
 	If $debugSetlog = 1 Then Setlog("Started dual getOcrSpaceCastleDonate", $COLOR_PURPLE)
-	$aCapTroops = getOcrSpaceCastleDonate(110, $DonatePixel[1] - 33) ; when the request is troops+spell
-	$aCapSpells = getOcrSpaceCastleDonate(235, $DonatePixel[1] - 33) ; when the request is troops+spell
+	$aCapTroops = getOcrSpaceCastleDonate(52, $DonatePixel[1] - 5) ; when the request is troops+spell
+	$aCapSpells = getOcrSpaceCastleDonate(159, $DonatePixel[1] - 5) ; when the request is troops+spell
 
 	If $debugSetlog = 1 Then Setlog("$aCapTroops :" & $aCapTroops, $COLOR_PURPLE)
 	If $debugSetlog = 1 Then Setlog("$aCapSpells :" & $aCapSpells, $COLOR_PURPLE)
 
 	If Not (StringInStr($aCapTroops, "#") Or StringInStr($aCapSpells, "#")) Then; verify if the string is valid or it is just a number from request without spell
 		If $debugSetlog = 1 Then Setlog("Started single getOcrSpaceCastleDonate", $COLOR_PURPLE)
-		$aCapTroops = getOcrSpaceCastleDonate(139, $DonatePixel[1] - 33) ; when the Request don�t have Spell
+		$aCapTroops = getOcrSpaceCastleDonate(139, $DonatePixel[1] - 5) ; when the Request don't have Spell
 
 		If $debugSetlog = 1 Then Setlog("$aCapTroops :" & $aCapTroops, $COLOR_PURPLE)
 		$aCapSpells = -1

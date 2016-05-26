@@ -1975,7 +1975,31 @@ EndIf
 	GUICtrlSetData($sldExtraTimeMax, $maxTrainAddition)
 	sldExtraTimeMin()
 	sldExtraTimeMax()
-	
+
+	If $LeaveCoCOpen = 1 Then
+		GUICtrlSetState($radLeaveCoCOpen, $GUI_CHECKED)
+	Else
+		GUICtrlSetState($radLeaveCoCOpen, $GUI_UNCHECKED)
+	EndIf
+
+	If $CloseCoCGame = 1 Then
+		GUICtrlSetState($radCloseCoCGame, $GUI_CHECKED)
+	Else
+		GUICtrlSetState($radCloseCoCGame, $GUI_UNCHECKED)
+	EndIf
+
+	If $RandomCoCOpen = 1 Then
+		GUICtrlSetState($radRandomCoCOpen, $GUI_CHECKED)
+	Else
+		GUICtrlSetState($radRandomCoCOpen, $GUI_UNCHECKED)
+	EndIf
+
+	If $RandomCloseTraining = 1 Then
+		GUICtrlSetState($chkRandomStayORClose, $GUI_CHECKED)
+	Else
+		GUICtrlSetState($chkRandomStayORClose, $GUI_UNCHECKED)
+	EndIf
+
 	; Daily Settings
 	If $ichkLimitAttacks = 1 Then
 		GUICtrlSetState($chkUseAttackLimit, $GUI_CHECKED)

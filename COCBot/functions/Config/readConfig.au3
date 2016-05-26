@@ -789,13 +789,17 @@ $itxtTreasuryGold = iniRead($config,"other","treasuryGold","0000")
 		$ichkCloseTraining = Number(IniRead($config, "Close When Training", "Enabled", "1"))
 		$minTrainAddition = Number(IniRead($config, "Close When Training", "AdditionMin", "10"))
 		$maxTrainAddition = Number(IniRead($config, "Close When Training", "AdditionMax", "20"))
+		$LeaveCoCOpen = IniRead($config, "Leave CoC Open", "Enabled", "0")
+		$CloseCoCGame = IniRead($config, "Close CoC Game", "Enabled", "1")
+		$RandomCoCOpen = IniRead($config, "Random Leave-Close", "Enabled", "0")
+		$RandomCloseTraining = IniRead($config, "Random Stay-Close Game", "Enabled", "0")
 
 		; Daily Attack Settings
 		$ichkLimitAttacks = Number(IniRead($config, "Daily Attacks", "Enabled", "1"))
 		$rangeAttacksStart = Number(IniRead($config, "Daily Attacks", "RangeStart", "20"))
 		$rangeAttacksEnd = Number(IniRead($config, "Daily Attacks", "RangeEnd", "25"))
 		$dailyAttackLimit = Number(IniRead($config, "Daily Attacks", "AttackLimit", "0"))
-		$dailyAttacks = Number(IniRead($config, "Daily Attacks", "Attacks", "0"))	
+		$dailyAttacks = Number(IniRead($config, "Daily Attacks", "Attacks", "0"))
 
 		; Simulate Sleep Settings
 		$ichkCloseNight = Number(IniRead($config, "Simulate Sleep", "Enabled", "1"))

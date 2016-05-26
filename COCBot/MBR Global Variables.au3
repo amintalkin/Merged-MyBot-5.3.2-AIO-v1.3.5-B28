@@ -49,7 +49,7 @@
 #include <Process.au3>
 
 
-Global Const $LatestVersionExpected = "Merged-MyBot-5.3.2-AIO-v1.3.5-B25"
+Global Const $LatestVersionExpected = "Merged-MyBot-5.3.2-AIO-v1.3.5-B26"
 
 Global Const $DEFAULT_HEIGHT = 780
 Global Const $DEFAULT_WIDTH = 860
@@ -1239,6 +1239,10 @@ Global $sTimerRandomHalt
 ; Close while training variables
 Global $ichkCloseTraining = 1
 Global $minTrainAddition = 10, $maxTrainAddition = 20
+Global $LeaveCoCOpen = 0
+Global $CloseCoCGame = 1
+Global $RandomCoCOpen = 0
+Global $RandomCloseTraining = 0
 
 
 ; Sleep at night variables

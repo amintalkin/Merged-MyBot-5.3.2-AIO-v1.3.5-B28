@@ -16,8 +16,8 @@
 Func chkDBSmartAttackRedArea()
 	Switch _GUICtrlComboBox_GetCurSel($cmbDBDeploy)
 		Case $eOneSide, $eTwoSides, $eThreeSides, $eAllSides
-			GUICtrlSetData($cmbDBUnitDelay, "|0|1|5|10|11|12|13|14|15", "10")
-			GUICtrlSetData($cmbDBWaveDelay, "|0|1|2|3|4|5|10|20|25", "10")
+			GUICtrlSetData($cmbDBUnitDelay, "|1|5|10|11|12|13|14|15", "10")
+			GUICtrlSetData($cmbDBWaveDelay, "|5|10|20|25", "10")
 
 			GUICtrlSetState($lblDBSmartDeploy, $GUI_SHOW)
 			GUICtrlSetState($cmbDBSmartDeploy, $GUI_SHOW)
@@ -27,7 +27,7 @@ Func chkDBSmartAttackRedArea()
 			Next
 		Case $eSmartSave
 			GUICtrlSetData($cmbDBUnitDelay, "|1|2|3|4|5|6|7|8", "5")
-			GUICtrlSetData($cmbDBWaveDelay, "|1|2|4|6|8", "4")
+			GUICtrlSetData($cmbDBWaveDelay, "|2|4|6|8", "4")
 
 			GUICtrlSetState($lblDBSmartDeploy, $GUI_HIDE)
 			GUICtrlSetState($cmbDBSmartDeploy, $GUI_HIDE)
