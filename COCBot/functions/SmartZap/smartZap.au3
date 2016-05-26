@@ -85,8 +85,13 @@ Func getSpellOffset()
 EndFunc   ;==>getSpellOffset
 
 Func zapDrill($x, $y, $xOffset, $yOffset)
-	dropSpell($x + $xOffset, $y + $yOffset, $eLSpell, 1)
+	Local $dropPoint = convertToPoint($x + $xOffset, $y + $yOffset)
+								
+	dropSpell($dropPoint, $eLSpell, 1)
 EndFunc   ;==>zapDrill
+;Func zapDrill($x, $y, $xOffset, $yOffset)
+;	dropSpell($x + $xOffset, $y + $yOffset, $eLSpell, 1)
+;EndFunc   ;==>zapDrill
 
 Func smartZap($minDE = -1)
 	Local $searchDark, $oldSearchDark = 0, $numSpells, $skippedZap = True, $performedZap = False
