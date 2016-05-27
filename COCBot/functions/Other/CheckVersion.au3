@@ -102,7 +102,7 @@ Func CheckMODVersion()
 	EndIf
 
 	Local $tempJson = @ScriptDir & "\Temp.json"
-	$hDownload = InetGet("https://api.github.com/repos/amintalkin/Merged-MyBot-5.3.2-AIO-v1.3.5-B26", $tempJson, 0, 1)
+	$hDownload = InetGet("https://api.github.com/repos/amintalkin/Merged-MyBot-5.3.2-AIO-v1.3.5-B27", $tempJson, 0, 1)
 	; Wait for the download to complete by monitoring when the 2nd index value of InetGetInfo returns True.
 	Local $i = 0
 	Do

@@ -87,6 +87,7 @@ Func ParseAttackCSV($debug = False)
 					Case ""
 						debugAttackCSV("comment line")
 					Case "MAKE"
+						ReleaseClicks()
 						If CheckCsvValues("MAKE", 2, $value2) Then
 							Local $sidex = StringReplace($value2, "-", "_")
 							If $sidex = "RANDOM" Then
@@ -167,6 +168,7 @@ Func ParseAttackCSV($debug = False)
 							debugAttackCSV("Discard row, bad value2 parameter:row " & $rownum)
 						EndIf
 					Case "DROP"
+						KeepClicks()
 						;index...
 						Local $index1, $index2, $indexvect, $isIndexPercent
 						$indexvect = StringSplit($value2, "-", 2)
@@ -295,7 +297,9 @@ Func ParseAttackCSV($debug = False)
 						Else
 						   DropTroopFromINI($value1, $index1, $index2, $qty1, $qty2, $value4, $delaypoints1, $delaypoints2, $delaydrop1, $delaydrop2, $sleepdrop1, $sleepdrop2, $debug)
 						EndIf
+						ReleaseClicks($AndroidAdbClicksTroopDeploySize)
 					Case "WAIT"
+						ReleaseClicks()
 						;sleep time
 						Local $sleep1, $sleep2, $sleepvect
 						$sleepvect = StringSplit($value1, "-", 2)
@@ -367,8 +371,10 @@ Func ParseAttackCSV($debug = False)
 						If $exitOneStar = 1 Or $exitTwoStars = 1 Or $exitNoResources = 1 Then ExitLoop ;stop parse CSV file, start exit battle procedure
 
 					Case "RECALC"
+						ReleaseClicks()
 						PrepareAttack($iMatchMode, True)
 					Case "SIDE"
+						ReleaseClicks()
 						Setlog("Calculate main side... ")
 						If StringUpper($value8) = "TOP-LEFT" Or StringUpper($value8) = "TOP-RIGHT" Or StringUpper($value8) = "BOTTOM-LEFT" Or StringUpper($value8) = "BOTTOM-RIGHT" Then
 							$MAINSIDE = StringUpper($value8)
@@ -521,6 +527,7 @@ Func ParseAttackCSV($debug = False)
 			EndIf
 			CheckHeroesHealth()
 		WEnd
+		ReleaseClicks()
 		FileClose($f)
 	Else
 		SetLog("Cannot find attack file " & $dirAttacksCSV & "\" & $filename & ".csv", $color_red)

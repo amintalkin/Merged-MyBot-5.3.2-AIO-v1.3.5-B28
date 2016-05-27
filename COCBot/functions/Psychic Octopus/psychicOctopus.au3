@@ -50,7 +50,7 @@ Func CloseCOCAndWait($timeRemaining, $forceClose = False)
 		; Pushbullet Msg
 		PushMsg("TakeBreak")
 		; Just wait without close the CoC
-		WaitnOpenCoC($timeRemaining * 1000, True, False)
+		WaitnOpenCoC($timeRemaining * 1000, True)
 	EndIf
 
 EndFunc   ;==>CloseCOCAndWait

@@ -49,7 +49,7 @@
 #include <Process.au3>
 
 
-Global Const $LatestVersionExpected = "Merged-MyBot-5.3.2-AIO-v1.3.5-B26"
+Global Const $LatestVersionExpected = "Merged-MyBot-5.3.2-AIO-v1.3.5-B27"
 
 Global Const $DEFAULT_HEIGHT = 780
 Global Const $DEFAULT_WIDTH = 860

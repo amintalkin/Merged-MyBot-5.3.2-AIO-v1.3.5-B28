@@ -21,12 +21,12 @@ Local $x = 30, $y = 150
 	$grpControls = GUICtrlCreateGroup(GetTranslated(7,2, "Halt Attack"), $x - 20, $y - 20, 450, 50)
 		$chkBotStop = GUICtrlCreateCheckbox("", $x - 5, $y, 16, 16)
 			$txtTip = GetTranslated(7,3, "Use these options to set when the bot will stop attacking.")
-			GUICtrlSetState(-1, $GUI_CHECKED)
+			GUICtrlSetState(-1, $GUI_UNCHECKED)
 			GUICtrlSetTip(-1, $txtTip)
 			GUICtrlSetOnEvent(-1, "chkBotStop")
 		$cmbBotCommand = GUICtrlCreateCombo("", $x + 20, $y - 3, 95, 25, BitOR($CBS_DROPDOWNLIST, $CBS_AUTOHSCROLL))
 			GUICtrlSetTip(-1, $txtTip)
-			GUICtrlSetData(-1, GetTranslated(7,4, "Halt Attack") & "|" & GetTranslated(7,155, "Stop Bot") & "|" & GetTranslated(7,156, "Close Bot") & "|" & GetTranslated(7,157, "Close CoC+Bot") & "|" & GetTranslated(7,5, "Shutdown PC") & "|" & GetTranslated(7,6, "Sleep PC") & "|" & GetTranslated(7,7, "Reboot PC")& "|" & GetTranslated(7,159, "Random Halt"), GetTranslated(7,159, -1))
+			GUICtrlSetData(-1, GetTranslated(7,4, "Halt Attack") & "|" & GetTranslated(7,155, "Stop Bot") & "|" & GetTranslated(7,156, "Close Bot") & "|" & GetTranslated(7,157, "Close CoC+Bot") & "|" & GetTranslated(7,5, "Shutdown PC") & "|" & GetTranslated(7,6, "Sleep PC") & "|" & GetTranslated(7,7, "Reboot PC")& "|" & GetTranslated(7,159, "Random Halt"), GetTranslated(7,4, -1))
 			;GUICtrlSetState (-1, $GUI_DISABLE)
 		$lblBotCond = GUICtrlCreateLabel(GetTranslated(7,88, "When..."), $x + 128, $y, 45, 17)
 		$cmbBotCond = GUICtrlCreateCombo("", $x + 175, $y - 3, 160, 25, BitOR($CBS_DROPDOWNLIST, $CBS_AUTOHSCROLL))
@@ -39,7 +39,7 @@ Local $x = 30, $y = 150
 			GetTranslated(7,22, "Now (Donate Only)") & "|" & GetTranslated(7,23, "Now (Only stay online)") & "|" & GetTranslated(7,150, "W/Shield (Train/Donate Only)") & "|" & GetTranslated(7,151, "W/Shield (Donate Only)") & "|" & _
 			GetTranslated(7,152, "W/Shield (Only stay online)") & "|" & _
 			GetTranslated(7,158, "Random 3 ~ 6 hours") & "|" & _
-GetTranslated(7,162, "gain Gold/h is less than") & "|" & GetTranslated(7,163, "gain Elixir/h is less than") & "|" & GetTranslated(7,160, "gain (Gold + Elixir)/h is less than"), GetTranslated(7,158, -1))
+GetTranslated(7,162, "gain Gold/h is less than") & "|" & GetTranslated(7,163, "gain Elixir/h is less than") & "|" & GetTranslated(7,160, "gain (Gold + Elixir)/h is less than"), GetTranslated(7,89, -1))
 			GUICtrlSetOnEvent(-1, "cmbBotCond")
 			GUICtrlSetState (-1, $GUI_DISABLE)
 		$cmbHoursStop = GUICtrlCreateCombo("", $x + 335, $y - 3, 80, 35, BitOR($CBS_DROPDOWNLIST, $CBS_AUTOHSCROLL))
