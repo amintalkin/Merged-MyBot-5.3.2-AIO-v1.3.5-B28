@@ -111,7 +111,7 @@ $grpTiming = GUICtrlCreateGroup(GetTranslated(10,30, "Timing"), $x - 20, $y - 20
 		_GUICtrlSlider_SetTipSide(-1, $TBTS_BOTTOM)
 		_GUICtrlSlider_SetTicFreq(-100, 100)
 		GUICtrlSetLimit(-1, 500, 1) ; change max/min value
-		GUICtrlSetData(-1, 40) ; default value
+		GUICtrlSetData(-1, 20) ; default value
 		GUICtrlSetOnEvent(-1, "sldTrainITDelay")
 GUICtrlCreateGroup("", -99, -99, 1, 1)
 
